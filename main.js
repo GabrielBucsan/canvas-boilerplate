@@ -1,6 +1,6 @@
 $(document).ready(()=>{
 
-    const canvas = new Canvas(400, 400);
+    const canvas = new Canvas(510, 510);
     const c = canvas.context;
 
     // MAIN FUNCTION

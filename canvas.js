@@ -15,11 +15,15 @@ class Canvas{
 
         this.size = new Vector(this.canvas.width, this.canvas.height);
         this.context = this.canvas.getContext('2d', { alpha: false });
-        this.color = 'black';
+        this.color = '#323232';
     }
 
-    update(){
-        this.context.clearRect(0, 0, this.size.x, this.size.y);
+    update(pos, size){
+        if(pos != undefined && size != undefined){
+            this.context.clearRect(pos.x, pos.y, size.x, size.y);
+        }else{
+            this.context.clearRect(0, 0, this.size.x, this.size.y);
+        }
         this.context.fillStyle = this.color;
         this.context.fillRect(0, 0, this.size.x, this.size.y);
     }
